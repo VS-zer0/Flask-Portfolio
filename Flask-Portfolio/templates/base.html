@@ -1,0 +1,50 @@
+<!doctype html>
+<head>
+<title>{% block title %}About{% endblock %} - VS Portfolio</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="icon" href="static/favicon.png">
+</head>
+<body>
+  <div class="container">
+<nav class="menu">
+  <h1><a href={{ request.host_url }}>Flask-Portfolio</a></h1>
+  <ul id="navigation">
+    {% for item in subjects %}
+      <li><a href={{ request.host_url }}{{ item['id'] }}><span>{{ item['name'] }}</span></a>
+    {% endfor %}
+  </ul>
+</nav>
+<header>
+  {% block header %}
+  <nav>
+    <h2>About</h2>
+    <ul>
+        <li><a href="https://github.com/VS-zer0" target="_blank" rel="noopener noreferrer"><span>GitHub</span></a>
+        <li><a href="https://replit.com/@VS-Zer0" target="_blank" rel="noopener noreferrer"><span>Repl.it</span></a>
+        <li><a href="https://t.me/vszer0" target="_blank" rel="noopener noreferrer"><span>Telegram</span></a>
+    </ul>
+  </nav>
+  {% endblock %}
+</header>
+<section class="content">
+  {% block content %}
+  <article class="post">
+    <h3>Смирнов Владислав Сергеевич</h3>
+    <div class="grid">
+      <div>
+    <p>
+      Студент 4 курса РГПУ им. А. И. Герцена на направлении "Информатика и вычислительная техника".
+    </p>
+    <p>
+      Языки: Python, JavaScript, C, C++, Java
+    </p>
+    </div>
+    <div>
+      <img class="face" src="static/vs.jpg"/>
+    </div>
+  </div>
+  </article>
+  {% endblock %}
+</section>
+</div>
+</body>

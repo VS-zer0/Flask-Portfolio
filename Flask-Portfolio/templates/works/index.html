@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<nav>
+  <h2>{% block title %}Works{% endblock %}</h2>
+  <ul>
+    {% for item in courses %}
+      <li><a href={{ request.host_url }}{{ request.view_args['subj_id'] }}/{{ item['id'] }}><span>{{ item['name'] }}</span></a>
+    {% endfor %}
+  </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+  {% for work in works %}
+    <article class="post">
+      <header>
+            <a href={{ request.host_url }}{{ request.view_args['subj_id'] }}/{{ work['course_id'] }}/{{ work['id'] }}>
+                <h1>{{ work['title'] }}</h1>
+            </a>
+          <div class="date">{{ work['date'].strftime('%Y-%m-%d') }}</div>
+      </header>
+    </article>
+  {% endfor %}
+{% endblock %}
