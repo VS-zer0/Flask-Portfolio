@@ -72,7 +72,7 @@ def work_detail(subj_id, crs_id, work_id):
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-        if not User.query.all():
-            db.session.add(User(password = generate_password_hash(os.environ.get('Key'))))
-            db.session.commit()
+        # if not User.query.all():
+        #     db.session.add(User(password = generate_password_hash(os.environ.get('Key'))))
+        #     db.session.commit()
     app.run(host='0.0.0.0', debug=True)
