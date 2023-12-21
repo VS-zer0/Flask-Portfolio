@@ -75,4 +75,5 @@ if __name__ == '__main__':
         # if not User.query.all():
         #     db.session.add(User(password = generate_password_hash(os.environ.get('Key'))))
         #     db.session.commit()
-    app.run(host='0.0.0.0', debug=True)
+    # app.run(host='0.0.0.0', debug=True)
+    app.run()
