@@ -34,3 +34,4 @@ class Attachments(db.Model):
     link = db.Column(db.Text, nullable=False)
     name = db.Column(db.String(255), nullable=False)
     work_id = db.Column(db.Integer, db.ForeignKey('work.id'), nullable=False)
+

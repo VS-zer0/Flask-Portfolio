@@ -1,12 +1,18 @@
-html { 
+html {
+    box-sizing: border-box;
+    height: 100%;
     background: #08110F; 
     padding: 1rem; 
     color: #E1EEEB;
 }
 
-body { 
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; 
     font-family: 'Anton', sans-serif;
     max-width: 1170px; 
+    min-height: 100%;
     margin: 0 auto; 
 }
 
@@ -84,12 +90,16 @@ nav ul li a, nav ul li span {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh;
 	width: 1170px;
 	/*позиционирование по центру*/
 	margin: 0 auto; 
 	/* height: 562.33px; */
 }
 .content { 
+    flex-grow: 1;
     padding: 0 1rem 1rem; 
 }
 .content > header { 
@@ -142,4 +152,20 @@ nav ul li a, nav ul li span {
 
 .content:last-child { 
     margin-bottom: 0; 
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+.footer-text {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    padding: 50px 0;
+    position: relative;
+    z-index: 1;
+}
+.footer-text p {
+    margin-right: 67px;
 }
