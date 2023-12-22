@@ -19,7 +19,7 @@ class Work(db.Model):
     title = db.Column(db.String(255), nullable=False)
     content = db.Column(db.Text, nullable=True)
     link = db.Column(db.Text)
-    type = db.Column(db.Enum('No Embed', 'Embed Document', 'Embed Repl.it'), nullable=False)
+    type = db.Column(db.Enum('Link', 'Embed Document', 'Embed Repl.it'), nullable=False)
     date = db.Column(db.DateTime, nullable=False)
     subject_id = db.Column(db.Integer, db.ForeignKey('subject.id'), nullable=False)
     subject = db.relationship('Subject')
