@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+{% for work in works %}
+<article class="post">
+  <header>
+    <a href={{ request.host_url }}{{ request.view_args['crs_id'] }}/{{ work['subject_id'] }}/{{ work['id'] }}>
+      <h1>{{ work['title'] }}</h1>
+    </a>
+    <div class="date">{{ work['date'].strftime('%Y-%m-%d') }}</div>
+  </header>
+</article>
+{% endfor %}
+{% endblock %}
+

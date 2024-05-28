@@ -1,0 +1,171 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+    background: #08110F; 
+    padding: 1rem; 
+    color: #E1EEEB;
+}
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; 
+    font-family: 'Anton', sans-serif;
+    max-width: 1170px; 
+    min-height: 100%;
+    margin: 0 auto; 
+}
+
+h1, h2, h3, h4, h5, h6 {  
+    color: #37CFAF;
+    padding:0; 
+    margin: 0; 
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 58px;
+}
+
+h3 {
+	font-size: 25px;
+	margin-bottom: 28px;
+}
+
+a { 
+    color: #37CFAF;
+    text-decoration:none; 
+}
+a:active {
+    color: #91D4C6;
+}
+
+a:hover {
+	border-bottom: 1px solid #37CFAF;
+}
+
+.menu ul {
+    background: #91d4c60d;
+	text-transform: uppercase;
+	font-size: 18px;
+	letter-spacing: 0.1em;
+    border-radius: 1rem;
+}
+
+nav {  
+    display: flex; 
+    align-items: center; 
+    padding: 0 0.5rem; 
+}
+
+nav h1, nav h2 { 
+    flex: auto; 
+    margin: 0; 
+}
+nav ul  { 
+    display: flex; 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+nav ul li a, nav ul li span { 
+    display: block; 
+    padding: 0.5rem;
+    font-size: 18px; 
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 700px 300px;
+    align-items: center;
+}
+
+.face {
+    border: solid 0.5em #287F6D; 
+    border-radius: 2em;
+}
+
+.embed {
+    padding-top: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh;
+	width: 1170px;
+	/*позиционирование по центру*/
+	margin: 0 auto; 
+	/* height: 562.33px; */
+}
+.content { 
+    flex-grow: 1;
+    padding: 0 1rem 1rem; 
+}
+.content > header { 
+    border-bottom: 1px solid #287F6D; 
+    display: flex; 
+    align-items: flex-end; 
+}
+.content > header h1 { 
+    flex: auto; 
+    margin: 1rem 0 0.25rem 0; 
+}
+
+.post {
+    font-family: 'OCR A Std', monospace;
+    background-color: #91d4c60d;
+    border-radius: 1rem;
+    margin-top: 20px;
+    padding: 20px;
+    position: relative;
+    line-height: 1.7rem;
+}
+
+.post > header { 
+    display: flex; 
+    align-items: flex-end; 
+    font-size: 0.85em; 
+}
+.post > header > div:first-of-type { 
+    flex: auto; 
+}
+.post > header h1 { 
+    font-size: 1.5em; 
+    margin-bottom: 0; 
+}
+.post .date { 
+    color: slategray; 
+    font-style: italic;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 1rem; 
+
+}
+.post .body { 
+    white-space: pre-line; 
+}
+
+.post p {
+    font-size: 1.3rem;
+}
+
+.content:last-child { 
+    margin-bottom: 0; 
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+.footer-text {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    padding: 50px 0;
+    position: relative;
+    z-index: 1;
+}
+.footer-text p {
+    margin-right: 67px;
+}
