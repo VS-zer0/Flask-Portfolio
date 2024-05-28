@@ -11,8 +11,8 @@ class WorkAdmin(ModelView):
     column_filters = ('course.name', 'subject.name', 'title')
 
 class SubjectAdmin(ModelView):
-    column_list = ('name',)
-    column_labels = {'name': 'Subject Name',}
+    column_list = ('name', 'link',)
+    column_labels = {'name': 'Subject Name', 'link': 'Link to files'}
     column_filters = ('name',)
     
 class CourseAdmin(ModelView):

@@ -9,7 +9,7 @@
     <nav class="menu">
       <h1><a href={{ request.host_url }}>Flask-Portfolio</a></h1>
       <ul id="navigation">
-        {% for item in subjects %}
+        {% for item in courses %}
         <li><a href={{ request.host_url }}{{ item['id'] }}><span>{{ item['name'] }}</span></a>
         {% endfor %}
       </ul>
